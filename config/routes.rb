@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'posts#index'
 
-  resource :posts
+  # To use Singular routes, use 'resource', instead of 'resources'
+  resources :posts
 
 end
