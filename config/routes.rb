@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   root 'posts#index'
 
   # To use Singular routes, use 'resource', instead of 'resources'
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
 end
