@@ -4,6 +4,10 @@ class PostsController < ApplicationController
     @posts = Post.all.order('created_at DESC')
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
   def new
     @post = Post.new
   end
@@ -32,8 +36,11 @@ class PostsController < ApplicationController
     end
   end
 
-  def show
+  def destroy
     @post = Post.find(params[:id])
+    @post.destroy
+
+    redirect_to root_path
   end
 
   private
