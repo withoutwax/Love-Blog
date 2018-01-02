@@ -16,6 +16,7 @@
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, post %></h2>
   <p><%= post.created_at.strftime("%B, %d, %Y") %></p>
+  <p><%= post.user.name %></p>
 <% end %>
 
 <% if user_signed_in? %>
