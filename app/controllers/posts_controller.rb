@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-
+  # before_action :configure_devise_params, if: :devise_controller?
 
   def index
     @posts = Post.all.order('created_at DESC')
@@ -50,6 +50,12 @@ class PostsController < ApplicationController
 
     redirect_to root_path
   end
+
+  # def configure_devise_params
+  #   devise_parameter_sanitizer.for(:sign_up) do |u|
+  #     u.permit(:username, :name, :email, :password, :password_confirmation)
+  #   end
+  # end
 
   private
     def post_params
