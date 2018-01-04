@@ -1,0 +1,135 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+ @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+
+
+ $pink01: #FFF0F6; // For background
+ $pink02: #FFAFD1;
+ $pink03: #FF94C1;
+ $pink04: #FFDEEC;
+ $grey: #D8D8D8;
+ $Roboto: 'Roboto', sans-serif;
+ $navBar-top01: 15px;
+ $navBar-top02: 10px;
+
+ $margin-left-g: 200px;
+ $margin-right-g: 200px;
+
+ body {
+   background-color: $pink01;
+   margin: 0;
+   padding: 0;
+ }
+
+
+ // NAVBAR
+ .navbar {
+   list-style-type: none;
+   background-color: white;
+   overflow: hidden;
+   margin: 0;
+   padding: 0;
+   // line-height: 60px;
+   height: 60px;
+
+   a {
+     display: inline-block;
+     text-decoration: none;
+     text-align: center;
+
+     // Transition settings for entire nav-bar
+     -webkit-transition-duration: 0.4s; /* Safari */
+     transition-duration: 0.4s;
+   }
+   .nav-header {
+     margin-top: $navBar-top01;
+     margin-left: $margin-left-g;
+     font-family: $Roboto;
+     font-weight: bold;
+     font-size: 25px;
+     color: $pink02;
+   }
+   .nav-header:hover {
+     color: $pink04;
+   }
+
+   .nav-btn {
+     float: right;
+     margin-right: $margin-right-g;
+     margin-top: $navBar-top02;
+     border: 2px solid $pink02;
+     border-radius: 30px;
+     width: 70px;
+     padding: 10px 10px;
+
+     font-family: $Roboto;
+     font-weight: normal;
+     color: $pink02;
+
+     // -webkit-transition-duration: 0.4s; /* Safari */
+     // transition-duration: 0.4s;
+   }
+   .nav-btn:hover {
+     background-color: $pink02;
+     color: white;
+   }
+   .create {
+     margin-right: 10px !important;
+     border: 2px solid $grey;
+     width: 150px;
+     color: $grey;
+   }
+   .create:hover {
+     background-color: white;
+     border: 2px solid #909090;
+     color: #909090;
+   }
+ }
+
+ // BODY - CARD
+ .card {
+   background: white;
+   margin-left: $margin-left-g;
+   margin-top: 10px;
+   padding: 20px 30px;
+   max-width: 50%;
+
+   font-family: $Roboto;
+
+   .name {
+     color: $pink02;
+   }
+   .date {
+     color: $grey;
+     font-size: 12px;
+   }
+   .title {
+     font-size: 30px;
+     font-weight: bold;
+     text-decoration: none;
+     color: black;
+   }
+   .read-more {
+     font-size: 12px;
+     font-weight: bold;
+     text-decoration: none;
+     color: $grey;
+   }
+ }
+
+ // INDIVIDUAL POSTS
