@@ -5,10 +5,22 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Roboto:400,500' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div class="navbar">
+      <%= link_to "Love Blog", root_path, class: "nav-header" %>
+
+      <% if user_signed_in? %>
+        <%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'login-btn') %>
+      <% else %>
+        <%= link_to('Login', new_user_session_path, class: 'login-btn') %>
+      <% end %>
+    </div>
+
+
     <%= yield %>
   </body>
 </html>

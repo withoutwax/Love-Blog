@@ -1,3 +1,72 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+
+
+$pink01: #FFF0F6; // For background
+$pink02: #FFAFD1;
+$pink03: #FF94C1;
+$pink04: #FFDEEC;
+$Roboto: 'Roboto', sans-serif;
+$navBar-top01: 15px;
+$navBar-top02: 10px;
+
+body {
+  background-color: $pink01;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  list-style-type: none;
+  background-color: white;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  // line-height: 60px;
+  height: 60px;
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+
+    // Transition settings for entire nav-bar
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+  .nav-header {
+    margin-top: $navBar-top01;
+    margin-left: 100px;
+    font-family: $Roboto;
+    font-weight: bold;
+    font-size: 25px;
+    color: $pink02;
+  }
+  .nav-header:hover {
+    color: $pink04;
+  }
+
+  .login-btn {
+    float: right;
+    margin-right: 100px;
+    margin-top: $navBar-top02;
+    border: 2px solid $pink02;
+    border-radius: 30px;
+    width: 70px;
+    padding: 10px 10px;
+
+    font-family: $Roboto;
+    font-weight: normal;
+    color: $pink02;
+
+    // -webkit-transition-duration: 0.4s; /* Safari */
+    // transition-duration: 0.4s;
+  }
+  .login-btn:hover {
+    background-color: $pink02;
+    color: white;
+  }
+}
