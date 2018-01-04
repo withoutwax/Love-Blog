@@ -2,11 +2,10 @@
 <p class="alert"><%= alert %></p>
 
 <% @posts.each do |post| %>
-  <h2><%= link_to post.title, post %></h2>
-  <p><%= post.created_at.strftime("%B, %d, %Y") %></p>
-  <p><%= post.user.name %></p>
-<% end %>
-
-<% if user_signed_in? %>
-  <%= link_to "Create New Posts", new_post_path %>
+  <div class="card">
+    <p class="name"><%= post.user.name %></p>
+    <p class="date"><%= post.created_at.strftime("%B, %d, %Y") %></p>
+    <%= link_to post.title, post, class: "title" %><br/><br/>
+    <%= link_to "Read more", post, class: "read-more" %>
+  </div>
 <% end %>
