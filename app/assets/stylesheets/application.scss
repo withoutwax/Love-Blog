@@ -235,3 +235,87 @@
     color: white;
   }
 }
+
+
+// COMMENTS
+.post-comment{
+  margin-left: $margin-left-g;
+  margin-bottom: 100px;
+  h2 {
+    font-family: $Roboto;
+  }
+
+  //COMMENT-CONTENT
+  .comment-content {
+    margin-bottom: 30px;
+    margin-right: $margin-left-g;
+    padding: 20px;
+    font-family: $Roboto;
+    background: white;
+    .comment-header{
+      color: $pink02;
+    }
+    .comment-time{
+      font-size: 12px;
+      color: $grey;
+    }
+    .comment-body {
+      margin: 50px 0px;
+
+      font-family: $Lora;
+    }
+
+    .delete-btn {
+      border: 2px solid red;
+      color: red;
+      margin-left: 85%;
+      margin-bottom: 50px;
+    }
+    .delete-btn:hover {
+      background-color: red;
+      color: white;
+    }
+  }
+
+  // COMMENT-INPUT
+  .new_comment {
+    background: white;
+    margin-right: $margin-left-g;
+    padding: 20px;
+
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    textarea {
+      width: 100%;
+      height: auto;
+      border: 2px solid $pink03;
+      font-size: 48px;
+      color: #a0a0a0;
+      border-style: hidden;
+
+      overflow: auto;
+      outline: none;
+      resize: none;
+
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+    textarea::-webkit-input-placeholder {color:$grey;}
+    textarea::-moz-placeholder {color:$grey;} /* Firefox 19+ */
+    textarea:-moz-placeholder {color:$grey;} /* Firefox 18- */
+    textarea:-ms-input-placeholder {color:$grey;}
+    input[type=submit] {
+      font-size: 15px;
+      width: 100px;
+    }
+    input[type=submit]:hover {
+      background-color: $pink02;
+      color: white;
+    }
+  }
+  .new_comment:hover {
+    box-shadow: 0px 0px 5px 1px $pink03;
+  }
+
+}

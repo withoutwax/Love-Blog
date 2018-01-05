@@ -17,7 +17,7 @@
         <%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'nav-btn btn') %>
         <%= link_to "Create New Posts", new_post_path, class: 'nav-btn btn create' %>
       <% else %>
-        <%= link_to('Login', new_user_session_path, class: 'nav-btn') %>
+        <%= link_to('Login', new_user_session_path, class: 'nav-btn btn') %>
       <% end %>
     </div>
 

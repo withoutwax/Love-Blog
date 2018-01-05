@@ -1,13 +1,16 @@
 <% @post.comments.each do |comment| %>
-  <p>
-    <strong>Name:</strong>
-    <%= comment.name %>
-  </p>
-  <p>
-    <%= comment.body %>
-  </p>
-  <p>
-    <%= time_ago_in_words(comment.created_at) %>Ago
-  </p>
-  <%= link_to "Delete Comment", [comment.post, comment], method: :delete, class: 'button', data: { confirm: 'Are you sure?' } %>
+  <div class="comment-content">
+    <p class="comment-header">
+      <%= comment.name %>
+    </p>
+    <p class="comment-time">
+      <%= time_ago_in_words(comment.created_at) %>Ago
+    </p>
+    <p class="comment-body">
+      <%= comment.body %>
+    </p>
+
+    <%= link_to "Delete Comment", [comment.post, comment], method: :delete, class: 'delete-btn btn', data: { confirm: 'Are you sure?' } %>
+  </div>
+
 <% end %>

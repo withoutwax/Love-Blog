@@ -1,13 +1,12 @@
 <%= form_for([@post, @post.comments.build]) do |f| %>
-  <p>
+  <!-- <p>
     <%= f.label :name %> <br />
     <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :body %> <br />
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
+  </p> -->
+  <!-- <div>
+    <%= f.label :body, 'Add a comment:' %> <br />
+  </div> -->
+  <%= f.text_area :body, placeholder: "Comment" %>
+  <%= f.submit 'Submit', :class => 'btn'%>
+
 <% end %>
