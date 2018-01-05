@@ -1,20 +1,36 @@
-<h1>This is a Show page!</h1>
-<br />
-<%= link_to "Back to Posts", posts_path %>
+<div class="post-container grid-container">
 
-<h2>
-  <%= @post.title %>
-</h2>
+  <!-- <div class="post-content grid-content">
 
-<p>
-  <%= @post.body %>
-</p>
+  </div> -->
 
-<%= link_to "Edit Posts", edit_post_path(@post) %>
-<%= link_to "Delete Posts", post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to "◀︎", posts_path, class: 'btn back-btn grid-header-01' %>
+  <div class="post-information grid-header-02">
+    <p class="name"><%= @post.user.name %></p>
+    <p class="date"><%= @post.created_at.strftime("%B, %d, %Y") %></p>
+  </div>
 
-<h2>Comments</h2>
-<%= render 'comments/comment' %>
+  <h1 class="title grid-title">
+    <%= @post.title %>
+  </h1>
 
-<h2>Add a Comment:</h2>
-<%= render 'comments/form' %>
+  <p class="content grid-contents">
+    <%= @post.body %>
+  </p>
+
+  <%= link_to "Edit Posts", edit_post_path(@post), class: "btn edit-btn grid-footer-01" %>
+  <%= link_to "Delete Posts", post_path(@post), method: :delete, data: { confirm: 'Are you sure?'}, class: "btn delete-btn grid-footer-02"  %>
+
+
+
+</div>
+
+
+
+<div class="post-comment">
+  <h2>Comments</h2>
+  <%= render 'comments/comment' %>
+
+  <h2>Add a Comment:</h2>
+  <%= render 'comments/form' %>
+</div>

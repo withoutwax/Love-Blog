@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Roboto:400,500' %>
+    <%= stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Lora|Roboto:400,700' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -14,8 +14,8 @@
       <%= link_to "Love Blog", root_path, class: "nav-header" %>
 
       <% if user_signed_in? %>
-        <%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'nav-btn') %>
-        <%= link_to "Create New Posts", new_post_path, class: 'nav-btn create' %>
+        <%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'nav-btn btn') %>
+        <%= link_to "Create New Posts", new_post_path, class: 'nav-btn btn create' %>
       <% else %>
         <%= link_to('Login', new_user_session_path, class: 'nav-btn') %>
       <% end %>

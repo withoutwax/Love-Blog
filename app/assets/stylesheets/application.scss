@@ -21,6 +21,7 @@
  $pink04: #FFDEEC;
  $grey: #D8D8D8;
  $Roboto: 'Roboto', sans-serif;
+ $Lora: 'Lora', serif;
  $navBar-top01: 15px;
  $navBar-top02: 10px;
 
@@ -33,6 +34,21 @@
    padding: 0;
  }
 
+.btn {
+  border: 2px solid $pink02;
+  border-radius: 30px;
+  width: 70px;
+  padding: 10px 10px;
+  text-decoration: none;
+
+  font-family: $Roboto;
+  font-weight: normal;
+  text-align: center;
+  color: $pink02;
+
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
 
  // NAVBAR
  .navbar {
@@ -48,10 +64,7 @@
      display: inline-block;
      text-decoration: none;
      text-align: center;
-
      // Transition settings for entire nav-bar
-     -webkit-transition-duration: 0.4s; /* Safari */
-     transition-duration: 0.4s;
    }
    .nav-header {
      margin-top: $navBar-top01;
@@ -69,14 +82,6 @@
      float: right;
      margin-right: $margin-right-g;
      margin-top: $navBar-top02;
-     border: 2px solid $pink02;
-     border-radius: 30px;
-     width: 70px;
-     padding: 10px 10px;
-
-     font-family: $Roboto;
-     font-weight: normal;
-     color: $pink02;
 
      // -webkit-transition-duration: 0.4s; /* Safari */
      // transition-duration: 0.4s;
@@ -97,6 +102,15 @@
      color: #909090;
    }
  }
+
+// Alert
+.notice {
+  margin-left: $margin-left-g;
+  color: white;
+
+  font-family: $Roboto;
+}
+
 
  // BODY - CARD
  .card {
@@ -130,3 +144,94 @@
  }
 
  // INDIVIDUAL POSTS
+
+ // CSS-Grid
+.grid-container {
+ display: grid;
+ grid-template-columns: $margin-left-g 100px auto 150px 150px $margin-left-g;
+ grid-template-rows: auto auto auto auto 30px;
+
+ grid-template-areas:
+ ". header-nav-01 header-nav-02 header-nav-03 header-nav-04 ."
+ ". title title title title ."
+ ". contents contents contents contents."
+ ". . . footer-01 footer-02 ."
+ ". . . . . ."
+ ;
+}
+.grid-header-01 {
+  grid-area: header-nav-01;
+}
+.grid-header-02 {
+  grid-area: header-nav-02;
+}
+.grid-title {
+  grid-area: title;
+}
+.grid-contents {
+  grid-area: contents;
+}
+.grid-footer-01 {
+  grid-area: footer-01;
+}
+.grid-footer-02 {
+  grid-area: footer-02;
+}
+
+
+.post-container {
+  background: white;
+
+  .back-btn {
+    margin: auto 0;
+    width: 20px;
+  }
+  .back-btn:hover {
+    background-color: $pink02;
+    color: white;
+    width: 50px;
+  }
+  .post-information {
+    margin: auto 0;
+    font-family: $Roboto;
+    .name {
+      color: $pink02;
+    }
+    .date{
+      font-size: 12px;
+      color: $grey;
+    }
+  }
+
+  h1.title {
+    margin-top: 50px;
+    font-family: $Roboto;
+    font-size: 36px;
+  }
+  p.content {
+    margin-bottom: 60px;
+    font-family: $Lora;
+    font-size: 20px;
+    line-height: 200%;
+  }
+
+  // Edit & Delete btn
+  .edit-btn {
+    border: 2px solid $grey;
+    width: 100px;
+    color: $grey;
+  }
+  .edit-btn:hover {
+    background-color: $grey;
+    color: white;
+  }
+  .delete-btn {
+    border: 2px solid red;
+    width: 100px;
+    color: red;
+  }
+  .delete-btn:hover {
+    background-color: red;
+    color: white;
+  }
+}
