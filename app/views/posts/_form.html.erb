@@ -1,16 +1,9 @@
 <%= form_for @post do |f| %>
-  <p>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </p>
 
-  <p>
-    <%= f.label :body %>
-    <%= f.text_area :body %>
-  </p>
+  <%= f.text_field :title, placeholder: "Title" %>
 
-  <p>
-    <%= f.submit %>
-  </p>
+  <%= f.text_area :body, placeholder: "Write your post here" %>
+
+  <%= f.submit 'Submit', :class => 'btn' %>
 
 <% end %>

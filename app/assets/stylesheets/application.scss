@@ -24,6 +24,7 @@
  $Lora: 'Lora', serif;
  $navBar-top01: 15px;
  $navBar-top02: 10px;
+ $placeholder: #606060;
 
  $margin-left-g: 200px;
  $margin-right-g: 200px;
@@ -237,6 +238,70 @@
 }
 
 
+// NEW POSTS && EDIT POSTS
+.new-post {
+  margin-top: 0px;
+  padding-bottom: 50px;
+  background-color: white;
+  .new_post {
+    margin-left: $margin-left-g;
+    margin-right: $margin-left-g;
+    padding-top: 50px;
+  }
+  .edit_post {
+    margin-left: $margin-left-g;
+    margin-right: $margin-left-g;
+    padding-top: 50px;
+  }
+  #post_title {
+    width: 100%;
+    margin-bottom: 50px;
+    font-size: 60px;
+    color: #a0a0a0;
+    border-style: hidden;
+    color: $placeholder;
+
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  #post_title::-webkit-input-placeholder { color:$grey; }
+  #post_title::-moz-placeholder { color:$grey; }
+  #post_title:-moz-placeholder { color:$grey; }
+  #post_title:-ms-input-placeholder { color:$grey; }
+  textarea {
+    width: 100%;
+    height: 600px;
+    border: 2px solid $pink03;
+    font-size: 48px;
+    color: $placeholder;
+    border-style: hidden;
+
+    overflow: auto;
+    outline: none;
+    resize: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  textarea::-webkit-input-placeholder { color:$grey; }
+  textarea::-moz-placeholder { color:$grey; } /* Firefox 19+ */
+  textarea:-moz-placeholder { color:$grey; } /* Firefox 18- */
+  textarea:-ms-input-placeholder { color:$grey; }
+  input[type=submit] {
+    font-size: 15px;
+    width: 100px;
+  }
+  input[type=submit]:hover {
+    background-color: $pink02;
+    color: white;
+  }
+}
+
 // COMMENTS
 .post-comment{
   margin-left: $margin-left-g;
@@ -301,10 +366,10 @@
       -moz-box-shadow: none;
       box-shadow: none;
     }
-    textarea::-webkit-input-placeholder {color:$grey;}
-    textarea::-moz-placeholder {color:$grey;} /* Firefox 19+ */
-    textarea:-moz-placeholder {color:$grey;} /* Firefox 18- */
-    textarea:-ms-input-placeholder {color:$grey;}
+    textarea::-webkit-input-placeholder { color:$grey; }
+    textarea::-moz-placeholder { color:$grey; } /* Firefox 19+ */
+    textarea:-moz-placeholder { color:$grey; } /* Firefox 18- */
+    textarea:-ms-input-placeholder { color:$grey; }
     input[type=submit] {
       font-size: 15px;
       width: 100px;
@@ -317,5 +382,24 @@
   .new_comment:hover {
     box-shadow: 0px 0px 5px 1px $pink03;
   }
+}
 
+footer {
+  background: $pink01;
+  margin-bottom: 100px;
+  padding-top: 100px;
+
+  font-family: $Roboto;
+  font-size: 14px;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: $grey;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+  a:hover {
+    color: $pink03;
+  }
 }
