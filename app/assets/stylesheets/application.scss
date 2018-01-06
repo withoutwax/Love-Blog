@@ -403,3 +403,149 @@ footer {
     color: $pink03;
   }
 }
+
+// LOGIN && REGISTRATIONS
+
+.devise-container {
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  h2 {
+    font-family: $Roboto;
+    font-size: 60px;
+    text-align: center;
+    color: $pink02
+  }
+  .login-content {
+    margin-left: $margin-left-g;
+    margin-right: $margin-left-g;
+    .new_user {
+      // Error Explanations
+      ul {
+        font-family: $Roboto;
+        font-style: italic;
+        color: $grey;
+        text-align: center;
+      }
+      div.field {
+        #user_email {
+          width: 100%;
+          height: auto;
+          border: 2px solid $pink03;
+          font-size: 60px;
+          color: #a0a0a0;
+          border-style: hidden;
+
+          overflow: auto;
+          outline: none;
+          resize: none;
+
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+        }
+        #user_email::-webkit-input-placeholder { color:$grey; }
+        #user_email::-moz-placeholder { color:$grey; } /* Firefox 19+ */
+        #user_email:-moz-placeholder { color:$grey; } /* Firefox 18- */
+        #user_email:-ms-input-placeholder { color:$grey; }
+
+        #user_password {
+          width: 100%;
+          height: auto;
+          border: 2px solid $pink03;
+          font-size: 60px;
+          color: #a0a0a0;
+          border-style: hidden;
+
+          overflow: auto;
+          outline: none;
+          resize: none;
+
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+        }
+        #user_password::-webkit-input-placeholder { color:$grey; }
+        #user_password::-moz-placeholder { color:$grey; } /* Firefox 19+ */
+        #user_password:-moz-placeholder { color:$grey; } /* Firefox 18- */
+        #user_password:-ms-input-placeholder { color:$grey; }
+
+        #user_password_confirmation {
+          width: 100%;
+          height: auto;
+          border: 2px solid $pink03;
+          font-size: 60px;
+          color: #a0a0a0;
+          border-style: hidden;
+
+          overflow: auto;
+          outline: none;
+          resize: none;
+
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+        }
+        #user_password_confirmation::-webkit-input-placeholder { color:$grey; }
+        #user_password_confirmation::-moz-placeholder { color:$grey; } /* Firefox 19+ */
+        #user_password_confirmation:-moz-placeholder { color:$grey; } /* Firefox 18- */
+        #user_password_confirmation:-ms-input-placeholder { color:$grey; }
+
+        em {
+          font-family: $Roboto;
+          font-style: italic;
+          color: $pink02
+        }
+
+        input[type=checkbox] {
+          margin-top: 50px;
+        }
+        label {
+          margin-top: 50px;
+          font-family: $Roboto;
+          color: $pink02;
+        }
+      }
+    }
+    input[type=submit] {
+      font-size: 15px;
+      width: auto;
+      margin-top: 50px;
+      margin-bottom: 40px;
+    }
+    input[type=submit]:hover {
+      background-color: $pink02;
+      color: white;
+    }
+  }
+
+  // SIGN-UP / REGISTRATION BUTTONS
+  .sign-up-btn {
+    margin-bottom: 50px;
+    border: 2px solid #49965a;
+    color: #49965a;
+  }
+  .sign-up-btn:hover {
+    background-color: #49965a;
+    color: white;
+  }
+
+  .frgt-password-btn {
+    border: 2px solid red;
+    color: red;
+  }
+  .frgt-password-btn:hover {
+    background-color: red;
+    color: white;
+  }
+
+  .login-btn {
+    margin-bottom: 50px;
+    border: 2px solid $pink02;
+    color: $pink02;
+  }
+  .login-btn:hover {
+    background-color: $pink02;
+    color: white;
+  }
+}
