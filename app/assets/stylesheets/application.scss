@@ -294,6 +294,7 @@
   textarea:-ms-input-placeholder { color:$grey; }
   input[type=submit] {
     font-size: 15px;
+    background-color: white;
     width: 100px;
   }
   input[type=submit]:hover {
